@@ -15,7 +15,6 @@ function TestErrorPage() {
 					content="This page is for testing error boundary as part of Tunji's Altschool Africa ReactJs examp project"
 				/>
 				<link rel="canonical" href="/test-errorboundary" />
-				<meta name="robots" content="noindex" />
 			</Helmet>
 			<Navbar />
 			<ErrorComp />
