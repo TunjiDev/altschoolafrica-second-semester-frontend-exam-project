@@ -4,7 +4,8 @@ https://tunji-submission.netlify.app/
 
 # Question:
 
-Setup react-router, implement Nested routes, 404 page, and Error boundary. Set up fake
-userAuthContext using the context API to always carry out a fake authentication, bonus -
-extract out a custom hook to get the currently logged-in user. Implement SEO and
-Navigation menu that will show on each page.
+Setup a custom counter hook with increment, decrement, reset, setValue functions with
+a valid UI and Implement a combination of states with a useReducer that implements a
+counter with the four evident features in the custom hook - increment, decrement, reset,
+setValue. Implement a page for the custom hook, useReducer, 404, and a page to test
+error boundary and good SEO.
