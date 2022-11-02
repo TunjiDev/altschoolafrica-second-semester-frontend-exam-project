@@ -5,19 +5,19 @@ export const initialState = {
 const reducer = (state, action) => {
 	switch (action.type) {
 		case "INCREMENT":
-			return { count: state.count + 1 };
+			return { count: Number(state.count) + 1 };
 
 		case "DECREMENT":
-			return { count: state.count - 1 };
+			return { count: Number(state.count) - 1 };
 
 		case "RESET":
 			return { count: 0 };
 
 		case "SET VALUE":
-			return { count: action.value };
+			return { count: Number(action.value) };
 
 		default:
-			return state;
+			return Number(state);
 	}
 };
 
