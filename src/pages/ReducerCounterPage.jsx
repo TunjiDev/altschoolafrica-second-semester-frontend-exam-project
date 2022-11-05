@@ -3,18 +3,18 @@ import { Helmet } from "react-helmet-async";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Counter from "../components/Counter";
+import ReducerCounter from "../components/ReducerCounter";
 
 function CounterPage() {
 	return (
 		<>
 			<Helmet>
-				<title>Custom Hook Counter Page</title>
+				<title>Reducer Counter Page</title>
 				<meta name="description" content="This is the page where the custom hook task is executed" />
-				<link rel="canonical" href="/customhook-counter" />
+				<link rel="canonical" href="/reducer-counter" />
 			</Helmet>
 			<Navbar />
-			<Counter />
+			<ReducerCounter />
 			<Footer />
 		</>
 	);

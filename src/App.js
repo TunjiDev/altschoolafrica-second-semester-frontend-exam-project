@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage";
 import CounterPage from "./pages/CounterPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import TestErrorPage from "./pages/TestErrorPage";
+import ReducerCounterPage from "./pages/ReducerCounterPage";
 
 function App() {
 	return (
@@ -13,7 +14,8 @@ function App() {
 				<Routes>
 					<Route path="/" element={<Navigate replace to="/home" />} />
 					<Route path="/home" element={<HomePage />} />
-					<Route path="/counter" element={<CounterPage />} />
+					<Route path="/customhook-counter" element={<CounterPage />} />
+					<Route path="/reducer-counter" element={<ReducerCounterPage />} />
 					<Route path="/test-errorboundary" element={<TestErrorPage />} />
 					<Route path="*" element={<NotFoundPage />} />
 				</Routes>

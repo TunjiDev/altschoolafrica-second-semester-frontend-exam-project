@@ -15,9 +15,17 @@ function Navbar() {
 			<span className={styles.navbar__link__container}>
 				<NavLink
 					className={(navData) => (navData.isActive ? `${styles.active} ${styles.navbar__link}` : `${styles.navbar__link}`)}
-					to="/counter"
+					to="/customhook-counter"
 				>
-					Counter
+					Customhook Counter
+				</NavLink>
+			</span>
+			<span className={styles.navbar__link__container}>
+				<NavLink
+					className={(navData) => (navData.isActive ? `${styles.active} ${styles.navbar__link}` : `${styles.navbar__link}`)}
+					to="/reducer-counter"
+				>
+					Reducer Counter
 				</NavLink>
 			</span>
 			<span className={styles.navbar__link__container}>

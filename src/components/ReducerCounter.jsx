@@ -2,16 +2,44 @@ import React, { useReducer, useRef } from "react";
 
 import styles from "./Counter.module.css";
 import reducer, { initialState } from "./reducer";
-import useCounter from "../hooks/useCounter";
 
-function Counter() {
+function ReducerCounter() {
 	const [state, dispatch] = useReducer(reducer, initialState);
 	const inputRef = useRef();
-	const { incrementHandler, decrementHandler, resetHandler, setValueHandler } = useCounter(dispatch, inputRef);
+
+	const incrementHandler = () => {
+		dispatch({
+			type: "INCREMENT",
+		});
+	};
+
+	const decrementHandler = () => {
+		dispatch({
+			type: "DECREMENT",
+		});
+	};
+
+	const resetHandler = () => {
+		dispatch({
+			type: "RESET",
+		});
+	};
+
+	const setValueHandler = () => {
+		if (inputRef.current.value) {
+			dispatch({
+				type: "SET VALUE",
+				value: inputRef.current.value,
+			});
+
+			inputRef.current.value = "";
+		}
+		return;
+	};
 
 	return (
 		<main className={styles.counter}>
-			<h1 className={styles.counterText}>The Custom Hook Counter Value is: {state.count}</h1>
+			<h1 className={styles.counterText}>The Reducer Counter Value is: {state.count}</h1>
 			<div className={styles.counterBtnContainer}>
 				<button className={styles.counterBtn} onClick={incrementHandler}>
 					Increment
@@ -33,4 +61,4 @@ function Counter() {
 	);
 }
 
-export default Counter;
+export default ReducerCounter;
